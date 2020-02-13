@@ -33,7 +33,7 @@ print(AND(1,1))
 '''
 x=np.array([0,1]) #input
 w=np.array([0.5,0.5]) #weight
-b=-0.7 # バイアス
+b=-0.7 # bias
 
 print(x)
 print(w)
