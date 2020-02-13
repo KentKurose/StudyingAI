@@ -3,7 +3,7 @@ import numpy as np
 # 2.4 limitation of perceptron
 
 # 2.4.1 XOR Gate
-# cannot implement with perceptron which is created so far
+# cannot implement with perceptron(s) which is created so far
 
 '''
           x2
@@ -35,8 +35,8 @@ XOR canNOT be devided as figure above
 
 # XOR
 
-# x1 => NAND  +=> AND
-# x2 => OR    +
+# (x1 => NAND  + -> AND ) NAND
+# (x2 => OR    + /
 
 def AND(x1,x2):
     x=np.array([x1,x2])
