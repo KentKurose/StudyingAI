@@ -2,7 +2,7 @@
 
 '''
 
-just for studying AI using O'reilly books
+just for basically studying AI with O'reilly books
 
 
 '''
