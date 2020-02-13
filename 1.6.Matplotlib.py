@@ -40,3 +40,4 @@ plt.imshow(img)
 plt.show()
 '''
 
+# don't forget to show()
