@@ -1,6 +1,6 @@
 import numpy as np
 
-# 1.5.2 Numpy配列の生成
+# 1.5.2 Numpy, create array
 
 x=np.array([1.0,2.0,3.0])
 #print(x)
@@ -8,7 +8,7 @@ x=np.array([1.0,2.0,3.0])
 
 #print(type(x))
 
-# 1.5.3 Numpyの算術計算
+# 1.5.3 Numpy, caluclate
 
 x=np.array([1.0,2.0,3.0])
 y=np.array([2.0,4.0,6.0])
@@ -21,7 +21,7 @@ y=np.array([2.0,4.0,6.0])
 x=np.array([1.0,2.0,3.0])
 #print( x/2.0 )
 
-# 1.5.4 NumpyのN次元配列
+# 1.5.4 Numpy, N dimension array
 A=np.array([ [1,2] , [3,4] ])
 #print(A)
 
@@ -62,7 +62,7 @@ B=np.array([10,20])
 #print("----------- Times")
 #print(A*B)
 
-# 1.5.6 Access to 要素
+# 1.5.6 Access to element
 
 X=np.array([[51,55],[14,19],[0,4]])
 
