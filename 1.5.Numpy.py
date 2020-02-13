@@ -25,13 +25,12 @@ x=np.array([1.0,2.0,3.0])
 A=np.array([ [1,2] , [3,4] ])
 #print(A)
 
-# 形状
+# Shape
 #print(A.shape)
-# 型
+# Type
 #print(A.dtype)
 
-# 算術計算
-
+# Arithmetic
 
 B=np.array([[3,6],[0,6]])
 
