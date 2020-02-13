@@ -1,9 +1,9 @@
 import numpy as np
 
-# 2.4 パーセプロトンの限界
+# 2.4 limitation of perceptron
 
-# 2.4.1 XOR Gate(排他的論理和：異なる場合のみ1)
-# これまでのパーセプトロンでは実装できない！
+# 2.4.1 XOR Gate
+# cannot implement with perceptron which is created so far
 
 '''
           x2
@@ -20,19 +20,18 @@ y= 1 ( -0.5+x1+x2 > 0 )
 
 ex) x2 = -x1+0.5 ( Linear equation )
 
-ここまでは直線で（4つの点を）分けることが出来た
+So far four points could be devided by linear, straight line
 
-XOR は
+XOR canNOT be devided as figure above
 (0,0)(1,1) => 0
 (0,1)(1,0) => 1
-なので直線では分けられない
 
-=> 非線形（直線じゃないやつ）
+=> nonlinear, non straight line
 
 '''
 
-# 2.5 多層パーセプトロン
-# ではどうやって実現するか => 層を重ねる(AND/OR/NORの組み合わせ)
+# 2.5 multilayer perceptron
+# How to implement => add layers, combination of AND/OR/NOR
 
 # XOR
 
@@ -95,8 +94,7 @@ print( xor(1,1) )
 
 print( "got it !!" )
 
-# 組み合わせれば良いだけ
-
+# Just combining makes it!
 
 
 
