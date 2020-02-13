@@ -31,10 +31,10 @@ plt.show()
 
 '''
 
-# 1.6.3 画像
+# 1.6.3 image
 
 '''
-img=imread('C:\\Users\\d255262\\PycharmProjects\\deeplearning\\venv\\Scripts\\img\\img.png')
+img=imread('C:\\Users\\XXXXX\\PycharmProjects\\deeplearning\\venv\\Scripts\\img\\img.png')
 plt.imshow(img)
 
 plt.show()
