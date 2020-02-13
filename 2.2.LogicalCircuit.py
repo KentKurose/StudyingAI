@@ -1,11 +1,11 @@
 import numpy as np
 
 
-# 2.2 単純な論理回路
+# 2.2 Simple logical circuit
 
-# 2.3 パーセプトロンの実装
+# 2.3 implementation of perceptron 
 
-# 2.3.1 簡単な実装
+# 2.3.1 simple implementation
 '''
 def AND(x1,x2):
     w1,w2,theta=0.5,0.5,0.7
@@ -28,11 +28,11 @@ print("AND(1,1)")
 print(AND(1,1))
 '''
 
-# 2.3.2 バイアス
+# 2.3.2 Bias
 
 '''
-x=np.array([0,1]) #入力
-w=np.array([0.5,0.5]) #重み
+x=np.array([0,1]) #input
+w=np.array([0.5,0.5]) #weight
 b=-0.7 # バイアス
 
 print(x)
@@ -48,7 +48,7 @@ print(sum+b)
 '''
 
 
-# 2.3.3 重みとバイアスによるAND実装
+# 2.3.3 implematation of AND by bias and weight
 
 def AND(x1,x2):
     x=np.array([x1,x2])
