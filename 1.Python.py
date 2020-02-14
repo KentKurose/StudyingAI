@@ -1,3 +1,5 @@
+# 1.4.2 Class
+
 class Man:
     def __init__(self,name):
         self.name=name
