@@ -1,5 +1,6 @@
 import numpy as np
 import math as math
+import matplotlib.pylab as plt
 
 # 3 Neural network
 
@@ -64,5 +65,136 @@ for i in [1,2,3,4,5,6,7,8,9,10]:
     print( "Sigmoid("+str(val)+")=>"+str(doSigmoid(val)) )
 
 # 3.2.2 Step function
+
+# Step function is simple function which returns 1 when the value is over zero and returns 0 when the value equals or less than zero
+def step_function(x): # 1 dimension
+    if x>0:
+        return 1
+    else:
+        return 0
+
+# However step function can NOT handle N dimensions such as array and
+# So define as below
+def step_function(x): # 2 or more dimensions
+    y=x>0
+    #print("DBG:"+"x="+str(x)+",y="+str(y))
+    return np.array(x>0, dtype=np.int)
+
+# execute test
+x=np.array([-1.0,1.0,2.0])
+print(x)
+y=step_function(x)
+print( y )
+
+# 3.2.3 Grapf of Step Function
+
+x=np.arange(-5.0, 5.0, 0.1)
+y=step_function(x)
+
+print(x)
+print( y )
+
+plt.plot(x,y)
+plt.ylim(-0.1,1.1)
+# plt.show()
+
+# 3.2.4 Sigmoid function
+
+def sigmoid(x):
+    return 1/(1+np.exp(-x)) # exp -> exponential 'e^(-x)'
+
+x=np.array([-1.0,1.0,2.0])
+s=sigmoid(x)
+print(x)
+print(s)
+
+# Grapf of sigmoid
+x=np.arange(-5.0, 5.0, 0.1)
+y=sigmoid(x)
+
+print(x)
+print( y )
+
+plt.plot(x,y)
+plt.ylim(-0.1,1.1)
+#plt.show()
+
+# 3.2.6 Nonlinear function
+#   Activation function MUST be Nonlinear function such as step/sigmouid
+
+# 3.2.7 ReLU function, Rectified Linear Unit
+
+# ReLU is
+# h(x)=x(x>0)
+#     =0(x<=0)
+
+def relu(x):
+    return np.maximum(0,x)
+
+x=np.arange(-5.0, 5.0, 0.1)
+y=relu(x)
+
+print(x)
+print( y )
+
+plt.plot(x,y)
+plt.ylim(-0.1,1.1)
+#plt.show()
+
+# 3.3 multi dimensions
+# 3.3.1 multi dimensions array
+
+# 1 dimension
+
+A=np.array([1,2,3,4])
+print(A)
+B=np.ndim(A)
+print("Dimension="+str(B))
+
+print("Shaped:"+str(A.shape)) # displayed as tuple
+print("Shaped[0]:"+str(A.shape[0]))
+
+# 2 dimensions
+
+B=np.array([[1,2],[3,4],[5,6]])
+print("B:"+str(B))
+print("np.ndim(B):"+str(np.ndim(B)))
+print("B.shape:"+str(B.shape))
+
+
+# 3.3.2 matrix multiplication
+
+A=np.array([[1,2],[3,4]])
+B=np.array([[5,6],[7,8]])
+
+M=np.dot(A,B)
+
+print("A:")
+print(str(A))
+print("B:")
+print(str(B))
+print("matrix multiplication:")
+print(str(M))
+
+
+A=np.array([[1,2,3],[4,5,6]])
+B=np.array([[1,2],[3,4],[5,6]])
+
+M=np.dot(A,B)
+
+print("A:")
+print(str(A))
+print("B:")
+print(str(B))
+print("matrix multiplication:")
+print(str(M))
+
+# Notice array(X,Y) array(Z,K)
+#                ^        ^
+# Y must equals Z to caluclate N dmensions arrangement
+
+# So far, common math
+# by here 2020.02.14 15:37
+
 
 # TBD
