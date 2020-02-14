@@ -191,7 +191,7 @@ print(str(M))
 
 # Notice array(X,Y) array(Z,K)
 #                ^        ^
-# Y must equals Z to caluclate N dmensions arrangement
+# Y must equal to Z to caluclate N dmensions arrangement
 
 # So far, common math
 # by here 2020.02.14 15:37
