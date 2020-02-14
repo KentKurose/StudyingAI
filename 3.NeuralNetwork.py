@@ -86,7 +86,7 @@ print(x)
 y=step_function(x)
 print( y )
 
-# 3.2.3 Grapf of Step Function
+# 3.2.3 Graph of Step Function
 
 x=np.arange(-5.0, 5.0, 0.1)
 y=step_function(x)
@@ -108,7 +108,7 @@ s=sigmoid(x)
 print(x)
 print(s)
 
-# Grapf of sigmoid
+# Graph of sigmoid
 x=np.arange(-5.0, 5.0, 0.1)
 y=sigmoid(x)
 
