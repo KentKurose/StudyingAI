@@ -1,5 +1,6 @@
 ----------------------
 -- Manually install using pip
+--  in case direct install can not work well because of HTTP Proxy including Local Proxy
 ----------------------
 
 -- Environment
@@ -8,8 +9,10 @@
 -- Python: 3.7.4
 -- pip   : 19.0.3 
 
-
 -- In advance, download whl files into "%PYTHON_HOME%\venv\Scripts\whl"
+
+-- These whl files are refferenced and need to be installed in advance
+-- ,so the order below is a procedure of mine.
 
 %PYTHON_HOME%\venv\Scripts>pip install whl/numpy-1.18.1-cp37-cp37m-win_amd64.whl
 Processing %PYTHON_HOME%\venv\scripts\whl\numpy-1.18.1-cp37-cp37m-win_amd64.whl
