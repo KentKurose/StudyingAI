@@ -28,7 +28,7 @@ print("AND(1,1)")
 print(AND(1,1))
 '''
 
-# 2.3.2 Bias
+# 2.3.2 Bias, which is one of constants/elements adjusting returning value
 
 '''
 x=np.array([0,1]) #input
@@ -46,7 +46,6 @@ print(sum)
 
 print(sum+b)
 '''
-
 
 # 2.3.3 implematation of AND by bias and weight
 
