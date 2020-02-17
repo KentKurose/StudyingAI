@@ -37,16 +37,16 @@ B=np.array([[3,6],[0,6]])
 #print("----------- Original Values ")
 #print(A)
 #print(B)
-#print("----------- Adds")
+#print("----------- Add")
 #print(A+B)
-#print("----------- Times")
+#print("----------- Mltiply")
 #print(A*B)
 #print("----------- 10 times(broadcast)")
 #print(A*10)
 
-# 1 Demnsion => Array
-# 2 Demnsion => Vector
-# 3 or more Demnsion => Tensor
+# 1 Demnsion          => Array
+# 2 Demnsions         => Vector
+# 3 or more Demnsions => Tensor
 
 # 1.5.5 Broadcast
 
@@ -61,7 +61,7 @@ B=np.array([10,20])
 #print("----------- Times")
 #print(A*B)
 
-# 1.5.6 Access to element
+# 1.5.6 Access to element(s)
 
 X=np.array([[51,55],[14,19],[0,4]])
 
