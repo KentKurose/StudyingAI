@@ -1,3 +1,12 @@
+# Python basic grammer
+
+# features are
+#  __init__
+#  :
+#  def
+#  indent
+#  no type definition nessesity
+
 # 1.4.2 Class
 
 class Man:
