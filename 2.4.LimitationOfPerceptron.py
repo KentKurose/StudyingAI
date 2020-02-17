@@ -11,18 +11,18 @@ import numpy as np
     (0,1) +   +(1,1)
           |
 ----------+---+------ x1
-    (0,0) |  (1,0)
+    (0,0) |    (1,0)
           |
           |
 
 y= 0 ( -0.5+x1+x2 <= 0 )
-y= 1 ( -0.5+x1+x2 > 0 )
+y= 1 ( -0.5+x1+x2 >  0 )
 
 ex) x2 = -x1+0.5 ( Linear equation )
 
 So far four points could be devided by linear, straight line
+However, XOR can NOT be devided as figure above
 
-XOR canNOT be devided as figure above
 (0,0)(1,1) => 0
 (0,1)(1,0) => 1
 
@@ -78,8 +78,6 @@ def xor(x1,x2):
     y=AND(s1,s2)
     return y
 
-
-
 print( "xor(0,0)" )
 print( xor(0,0) )
 
@@ -95,8 +93,3 @@ print( xor(1,1) )
 print( "got it !!" )
 
 # Just combining makes it!
-
-
-
-
-
