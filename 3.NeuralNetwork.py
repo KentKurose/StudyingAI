@@ -196,5 +196,24 @@ print(str(M))
 # So far, common math
 # by here 2020.02.14 15:37
 
+C=np.array([[1,2],[3,4]])
+print(C.shape)
+print(A.shape)
+#np.dot(A,C)
 
-# TBD
+'''
+Traceback (most recent call last):
+  File "*****/venv/3.NeuralNetwork.py", line 202, in <module>
+    np.dot(A,C)
+  File "<__array_function__ internals>", line 6, in dot
+ValueError: shapes (2,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)
+                      ^       ^ 
+                      3  <>   2
+'''
+
+A=np.array([[1,2],[3,4],[5,6]])   # 3*2
+B=np.array([[1,2,3,4],[5,6,7,8]]) # 2*4
+
+# 3*2  *  2*4  =  3*4
+C=np.dot(A,B)
+print(C)
