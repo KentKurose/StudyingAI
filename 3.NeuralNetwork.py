@@ -229,10 +229,11 @@ https://rikeilabo.com/vector-formula-list#i-9
 2次元→Scalar
 https://mathwords.net/gyoretunonaiseki
 
-ベクトルの内積（NumPy）
+ベクトルの内積（NumPy.dot）
 1次元→Scalar
 2次元→行列
 https://www.sejuku.net/blog/71827
 
+少し整理が必要
 
 '''
