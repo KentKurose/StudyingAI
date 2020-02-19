@@ -220,20 +220,91 @@ print(C)
 
 '''
 
-ベクトルの内積（高校数学）
-1次元→Scalar
+If both a and b are 1-D arrays, ## MATHMATICALLY ## it is inner product of vectors (without complex conjugation) and results in scalar.
 https://rikeilabo.com/vector-formula-list#i-9
-
-
-行列の内積（数学）
-2次元→Scalar
-https://mathwords.net/gyoretunonaiseki
-
-ベクトルの内積（NumPy.dot）
-1次元→Scalar
-2次元→行列
+If both a and b are 1-D arrays, ## NumPy.dot     ## it is inner product of vectors (without complex conjugation) and results in scalar.
 https://www.sejuku.net/blog/71827
 
-少し整理が必要
+If both a and b are 2-D arrays, ## MATHMATICALLY ## it is inner product of vectors (without complex conjugation) and results in scalar.
+https://mathwords.net/gyoretunonaiseki
+If both a and b are 2-D arrays, ## NumPy.dot     ## it is inner product of vectors (without complex conjugation) and results in vector.
+https://docs.scipy.org/doc/numpy/reference/generated/numpy.dot.html
 
+If both a and b are 3-D(or more) arrays, ## MATHMATICALLY ## it is inner product of vectors (without complex conjugation) and results in scalar.
+If both a and b are 3-D(or more) arrays, ## NumPy.dot     ## it is inner product of vectors (without complex conjugation) and results in tensor.
+https://docs.scipy.org/doc/numpy/reference/generated/numpy.dot.html
+
+https://docs.scipy.org/doc/numpy/reference/generated/numpy.matmul.html#numpy.matmul
+also mentions that 
+If both a and b are 1-D arrays, it is inner product of vectors (without complex conjugation).
+If both a and b are 2-D arrays, it is matrix multiplication, but using matmul or a @ b is preferred.
+If either a or b is 0-D (scalar), it is equivalent to multiply and using numpy.multiply(a, b) or a * b is preferred.
+If a is an N-D array and b is a 1-D array, it is a sum product over the last axis of a and b.
+If a is an N-D array and b is an M-D array (where M>=2), it is a sum product over the last axis of a and the second-to-last axis of b:
 '''
+
+# 2-D arrays: results of these three are the same
+
+print("2-D arrays: results of these three are the same")
+
+A=np.array([[1,2],[3,4]])
+B=np.array([[5,6],[7,8]])
+
+print("A")
+print(A)
+print("B")
+print(B)
+
+print("np.dot(A,B)")
+print(np.dot(A,B))
+
+print("np.matmul(A,B)")
+print(np.matmul(A,B))
+
+print("A@B")
+print(A@B)
+
+print("np.sum(A@B)")
+print(np.sum(A@B))
+
+# 0-D arrays: results of these three are the same
+#  but results in sclar using dot, and results in array with others
+print("0-D arrays: results of these three are the same")
+
+A=np.array([1])
+B=np.array([2])
+
+print("A")
+print(A)
+print("B")
+print(B)
+
+print("np.dot(A,B)")
+print(np.dot(A,B))
+
+print("np.multiply(A,B)")
+print(np.multiply(A,B))
+
+print("A*B")
+print(A*B)
+
+print("A@B")
+print(A@B)
+
+print("np.matmul(A,B)")
+print(np.matmul(A,B))
+
+print("np.sum(np.dot(A,B))")
+print(np.sum(np.dot(A,B)))
+print("np.sumnp.multiply(A,B)")
+print(np.sum(np.multiply(A,B)))
+print("np.sum(A*B)")
+print(np.sum(A*B))
+print("np.sum(A@B)")
+print(np.sum(A@B))
+
+# To results in scalar, can use np.sum(np.dot(A,B)) but sometimes not preffered
+# Preffered functions are
+# 0-D: numpy.multiply  or    *
+# 1-D: numpy.dot
+# 2-D: numpy.matmul    or  a @ b
