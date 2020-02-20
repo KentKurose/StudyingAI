@@ -308,3 +308,47 @@ print(np.sum(A@B))
 # 0-D: numpy.multiply  or    *
 # 1-D: numpy.dot
 # 2-D: numpy.matmul    or  a @ b
+
+# 3.3.3 matrix multiplication for Neural network
+
+# in this sample
+#   Activation function and Bias are are omitted.
+
+print("3.3.3 matrix multiplication for Neural network")
+
+X=np.array([1,2])
+print("X:"+str(X))
+print("X.shape:"+str(X.shape))
+
+# results in X.shape:(2,)
+# I think (1,2) is the right, but I also guess omitted description is used
+
+# To check output
+'''
+T=np.array([[1,2],[1,2],[1,2]])
+print("T.shape:"+str(T.shape))
+'''
+#  T.shape:(3, 2)
+
+W=np.array([[1,3,5],[2,4,6]])
+print("W:"+str(W))
+print("W.shape:"+str(W.shape))
+
+Y=np.dot(X,W)
+print("Y:"+str(Y))
+
+# this means 2 imputs lead 3 output as petterns
+'''
+
+           ->  y1
+x1 ->  
+           ->  y2
+x2 ->
+           ->  y3
+
+'''
+# 3.4 Three-Layer Neural network
+
+
+
+
