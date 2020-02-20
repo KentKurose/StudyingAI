@@ -430,3 +430,4 @@ x=np.array([1.0,0.5])
 y=foward(network,x)
 print("x:"+str(x))
 print("y:"+str(y))
+
