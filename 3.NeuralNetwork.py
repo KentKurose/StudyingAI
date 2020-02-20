@@ -43,26 +43,26 @@ import matplotlib.pylab as plt
 
 # Let's try as I want
 
-def doSigmoid(x):
+def sigmoid(x):
     y=1.0/(  1.0 + math.e**(-x) )
     return y
 
 
 for i in [1,2,3,4,5,6,7,8,9,10]:
     val=i*(-1)
-    print( "Sigmoid("+str(val)+")=>"+str(doSigmoid(val)) )
+    print( "Sigmoid("+str(val)+")=>"+str(sigmoid(val)) )
 
 for i in [1,2,3,4,5,6,7,8,9,10]:
     val=i*(+1)
-    print( "Sigmoid("+str(val)+")=>"+str(doSigmoid(val)) )
+    print( "Sigmoid("+str(val)+")=>"+str(sigmoid(val)) )
 
 for i in [1,2,3,4,5,6,7,8,9,10]:
     val=i*(-2)
-    print( "Sigmoid("+str(val)+")=>"+str(doSigmoid(val)) )
+    print( "Sigmoid("+str(val)+")=>"+str(sigmoid(val)) )
 
 for i in [1,2,3,4,5,6,7,8,9,10]:
     val=i*(+2)
-    print( "Sigmoid("+str(val)+")=>"+str(doSigmoid(val)) )
+    print( "Sigmoid("+str(val)+")=>"+str(sigmoid(val)) )
 
 # 3.2.2 Step function
 
@@ -310,11 +310,11 @@ print(np.sum(A@B))
 # 2-D: numpy.matmul    or  a @ b
 
 # 3.3.3 matrix multiplication for Neural network
+print("3.3.3 matrix multiplication for Neural network")
 
 # in this sample
 #   Activation function and Bias are are omitted.
 
-print("3.3.3 matrix multiplication for Neural network")
 
 X=np.array([1,2])
 print("X:"+str(X))
@@ -348,7 +348,85 @@ x2 ->
 
 '''
 # 3.4 Three-Layer Neural network
+print("3.4 Three-Layer Neural network")
+
+# Practical Neural network
+
+'''
+   L1     L2    L3
+       *
+x1           *     y1
+       *
+x2           *     y2
+       *
+'''
+
+X=np.array([1.0,0.5])
+W1=np.array([[0.1,0.3,0.5],[0.2,0.4,0.6]])
+B1=np.array([0.1,0.2,0.3])
+
+A1=np.dot(X,W1)+B1
+
+print("X:"+str(X))
+print("W1:"+str(W1))
+print("B1:"+str(B1))
+print("A1:"+str(A1))
+
+Z1=sigmoid(A1)
+
+# Remind:
+# h(x)=1/(  1 + exp(-x) )
+# e:Napier's constants
+print("Z1(after sigmoid):"+str(Z1))
 
 
+W2=np.array([[0.1,0.4],[0.2,0.5],[0.3,0.6]])
+B2=np.array([0.1,0.2])
+A2=np.dot(Z1,W2)+B2
+print("W2:"+str(W2))
+print("B2:"+str(B2))
+print("A2:"+str(A2))
+Z2=sigmoid(A2)
+print("Z2(after sigmoid):"+str(Z2))
 
+# Identity Function
 
+def identity_funtion(x):
+    return x
+
+W3=np.array([[0.1,0.3],[0.2,0.4]])
+B3=np.array([0.1,0.2])
+A3=np.dot(Z2,W3)+B3
+print("W3:"+str(W3))
+print("B3:"+str(B3))
+print("A3:"+str(A3))
+Z3=identity_funtion(A3)
+print("Z3(after identity_funtion):"+str(Z3))
+
+# Summary
+def init_network():
+    network={}
+    network['W1']=np.array([[0.1,0.3,0.5],[0.2,0.4,0.6]])
+    network['b1']=np.array([0.1,0.2,0.3])
+    network['W2']=np.array([[0.1,0.4],[0.2,0.5],[0.3,0.6]])
+    network['b2']=np.array([0.1,0.2])
+    network['W3']=np.array([[0.1,0.3],[0.2,0.4]])
+    network['b3']=np.array([0.1,0.2])
+    return network
+
+def foward(network,x):
+    W1,W2,W3=network['W1'],network['W2'],network['W3']
+    b1,b2,b3=network['b1'],network['b2'],network['b3']
+    a1=np.dot(x,W1)+b1
+    z1=sigmoid(a1)
+    a2=np.dot(z1,W2)+b2
+    z2=sigmoid(a2)
+    a3=np.dot(z2,W3)+b3
+    y=identity_funtion(a3)
+    return y
+
+network=init_network()
+x=np.array([1.0,0.5])
+y=foward(network,x)
+print("x:"+str(x))
+print("y:"+str(y))
