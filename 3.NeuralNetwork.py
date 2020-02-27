@@ -403,8 +403,11 @@ print("A3:"+str(A3))
 Z3=identity_funtion(A3)
 print("Z3(after identity_funtion):"+str(Z3))
 
-# Summary
+# 3.4.3 Summary of implementation
+
+# initialize wight and bias
 def init_network():
+    # dictionary type
     network={}
     network['W1']=np.array([[0.1,0.3,0.5],[0.2,0.4,0.6]])
     network['b1']=np.array([0.1,0.2,0.3])
@@ -414,6 +417,7 @@ def init_network():
     network['b3']=np.array([0.1,0.2])
     return network
 
+# From input signal to output signal(FOWARD)
 def foward(network,x):
     W1,W2,W3=network['W1'],network['W2'],network['W3']
     b1,b2,b3=network['b1'],network['b2'],network['b3']
@@ -431,3 +435,12 @@ y=foward(network,x)
 print("x:"+str(x))
 print("y:"+str(y))
 
+# 3.5 Output layer design
+
+'''
+Neural networks can be used for both classification and regression problems.
+Machine learning problems can be broadly classified into classification problems and regression problems.
+
+'''
+
+# 3.5.1 Identity and softmax functions
