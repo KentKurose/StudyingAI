@@ -445,6 +445,8 @@ Machine learning problems can be broadly classified into classification problems
 '''
 
 # 3.5.1 Identity function and Softmax function
+print("------------ 3.5.1 Identity function and Softmax function ------------")
+
 '''
 Identity function -> regression problems 
 Softmax functions -> classification problem  
@@ -488,16 +490,32 @@ y=exp_a/sum_exp_a
 print(y)
 
 # Softmax function
+print("------------ Softmax function ------------")
 
 def softmax(a):
     c=np.max(a)
     exp_a=np.exp(a-c) # to avoid OverFlow
-    sum_exp_a=sp.sum(exp_a)
+    sum_exp_a=np.sum(exp_a)
     y=exp_a/sum_exp_a
     return y
 
 # 3.5.3 Feature of Softmax
 
-# TBD
+a=np.array([0.3,2.9,4.0])
+print("asm:"+str(a))
+y=softmax(a)
+print("y:"+str(y))
+sum_y=np.sum(y)
+print("sum_y:"+str(sum_y))
 
+# The sum of Softmax is always 1. So it can be considered a probability
+
+# 3.5.4 Number of neurons in output layer
+
+# 3.6 Handwritten numerical recognition
+# Simple example of inference processing, Foward Propagation
+
+# 3.6.1 MNIST data set
+
+(TBD)
 
