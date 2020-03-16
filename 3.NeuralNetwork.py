@@ -517,5 +517,8 @@ print("sum_y:"+str(sum_y))
 
 # 3.6.1 MNIST data set
 
-(TBD)
+'''
+Download from
+https://github.com/oreilly-japan/deep-learning-from-scratch
+'''
 
