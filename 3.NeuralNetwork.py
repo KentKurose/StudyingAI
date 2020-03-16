@@ -1,3 +1,5 @@
+from csv import excel
+
 import numpy as np
 import math as math
 import matplotlib.pylab as plt
@@ -440,7 +442,62 @@ print("y:"+str(y))
 '''
 Neural networks can be used for both classification and regression problems.
 Machine learning problems can be broadly classified into classification problems and regression problems.
-
 '''
 
-# 3.5.1 Identity and softmax functions
+# 3.5.1 Identity function and Softmax function
+'''
+Identity function -> regression problems 
+Softmax functions -> classification problem  
+'''
+
+# Softmax functions:
+# yk=e^ak/sum(e^ak)
+
+a=np.array([0.3,2.9,4.0])
+exp_a=np.exp(a)
+print(exp_a)
+sum_exp_a=np.sum(exp_a)
+print(sum_exp_a)
+y=exp_a/sum_exp_a
+print(y)
+
+# Altough codes above are logically right, they have a problem related to OverFlow
+# Therefor, below is needed for programming not to cause(to avoid ) OverFlow
+
+# yk=e^ak/sum(e^ak)
+#   =C*e^ak/C*sum(e^ak)
+#   =e^(ak+log(C))/sum(e^(ak+log(C)))
+#   =e^(ak+C')/sum(e^(ak+C'))
+#   *  C'=log(C) :const
+
+a=np.array([1010,1000,990])
+#exp_a=np.exp(a)
+#print(exp_a) # can't handle because of OverFlow
+
+print("------------------------")
+
+mx=np.max(a) # 1010
+print("Max:"+str(mx))
+a2=a-mx
+print("a2:"+str(a2))
+exp_a=np.exp(a2)
+print("exp_a:"+str(exp_a))
+sum_exp_a=np.sum(np.exp(a2))
+print("sum_exp_a:"+str(sum_exp_a))
+y=exp_a/sum_exp_a
+print(y)
+
+# Softmax function
+
+def softmax(a):
+    c=np.max(a)
+    exp_a=np.exp(a-c) # to avoid OverFlow
+    sum_exp_a=sp.sum(exp_a)
+    y=exp_a/sum_exp_a
+    return y
+
+# 3.5.3 Feature of Softmax
+
+# TBD
+
+
