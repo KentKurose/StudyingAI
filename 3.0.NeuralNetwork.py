@@ -530,10 +530,5 @@ print("sum_y:" + str(sum_y))
 # 3.6 Handwritten numerical recognition
 # Simple example of inference processing, Foward Propagation
 
-# 3.6.1 MNIST data set
 
-'''
-Download from
-https://github.com/oreilly-japan/deep-learning-from-scratch
-'''
 
