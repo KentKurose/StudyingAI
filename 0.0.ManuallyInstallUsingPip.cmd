@@ -9,9 +9,10 @@
 -- Python: 3.7.4
 -- pip   : 19.0.3 
 
--- In advance, download whl files into "%PYTHON_HOME%\venv\Scripts\whl"
+-- In case you can't install packages directly because of proxy
+-- download whl files into "%PYTHON_HOME%\venv\Scripts\whl" in advance
 
--- These whl files are refferenced and need to be installed in advance
+-- These whl files are referenced and need to be installed in advance
 -- ,so the order below is a procedure of mine.
 
 %PYTHON_HOME%\venv\Scripts>pip install whl/numpy-1.18.1-cp37-cp37m-win_amd64.whl

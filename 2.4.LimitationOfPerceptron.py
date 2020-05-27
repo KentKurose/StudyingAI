@@ -1,9 +1,9 @@
 import numpy as np
 
-# 2.4 limitation of perceptron
+# 2.4 limitation of Perceptron
 
 # 2.4.1 XOR Gate
-# cannot implement with perceptron(s) which is created so far
+# cannot implement with Perceptron(s) which is created so far
 
 '''
           x2
@@ -30,6 +30,7 @@ However, XOR can NOT be devided as figure above
 
 '''
 
+
 # 2.5 multilayer perceptron
 # How to implement => add layers, combination of AND/OR/NOR
 
@@ -38,58 +39,61 @@ However, XOR can NOT be devided as figure above
 # (x1 => NAND  + -> AND ) NAND
 # (x2 => OR    + /
 
-def AND(x1,x2):
-    x=np.array([x1,x2])
-    w=np.array([0.5,0.5])
-    b=-0.7
-    tmp=np.sum(w*x)+b
+def AND(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.7
+    tmp = np.sum(w * x) + b
 
     if tmp <= 0:
         return 0
     else:
         return 1
 
-def NAND(x1,x2):
-    x=np.array([x1,x2])
-    w=np.array([-0.5,-0.5])
-    b=0.7
-    tmp=np.sum(w*x)+b
+
+def NAND(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([-0.5, -0.5])
+    b = 0.7
+    tmp = np.sum(w * x) + b
 
     if tmp <= 0:
         return 0
     else:
         return 1
 
-def OR(x1,x2):
-    x=np.array([x1,x2])
-    w=np.array([0.5,0.5])
-    b=-0.2
-    tmp=np.sum(w*x)+b
+
+def OR(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.2
+    tmp = np.sum(w * x) + b
 
     if tmp <= 0:
         return 0
     else:
         return 1
+
 
 # XOR
-def xor(x1,x2):
-    s1=NAND(x1,x2)
-    s2=OR(x1,x2)
-    y=AND(s1,s2)
+def xor(x1, x2):
+    s1 = NAND(x1, x2)
+    s2 = OR(x1, x2)
+    y = AND(s1, s2)
     return y
 
-print( "xor(0,0)" )
-print( xor(0,0) )
 
-print( "xor(0,1)" )
-print( xor(0,1) )
+print("xor(0,0)")
+print(xor(0, 0))
 
-print( "xor(1,0)" )
-print( xor(1,0) )
+print("xor(0,1)")
+print(xor(0, 1))
 
-print( "xor(1,1)" )
-print( xor(1,1) )
+print("xor(1,0)")
+print(xor(1, 0))
 
-print( "got it !!" )
+print("xor(1,1)")
+print(xor(1, 1))
+
 
 # Just combining makes it!

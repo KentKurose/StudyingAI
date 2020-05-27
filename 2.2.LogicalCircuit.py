@@ -1,9 +1,8 @@
 import numpy as np
 
-
 # 2.2 Simple logical circuit
 
-# 2.3 implementation of perceptron 
+# 2.3 implementation of Perceptron
 
 # 2.3.1 simple implementation
 '''
@@ -47,35 +46,38 @@ print(sum)
 print(sum+b)
 '''
 
-# 2.3.3 implematation of AND by bias and weight
 
-def AND(x1,x2):
-    x=np.array([x1,x2])
-    w=np.array([0.5,0.5])
-    b=-0.7
-    tmp=np.sum(w*x)+b
+# 2.3.3 implementation of AND by bias and weight
 
-    if tmp <= 0:
-        return 0
-    else:
-        return 1
-
-def NAND(x1,x2):
-    x=np.array([x1,x2])
-    w=np.array([-0.5,-0.5])
-    b=0.7
-    tmp=np.sum(w*x)+b
+def AND(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.7
+    tmp = np.sum(w * x) + b
 
     if tmp <= 0:
         return 0
     else:
         return 1
 
-def OR(x1,x2):
-    x=np.array([x1,x2])
-    w=np.array([0.5,0.5])
-    b=-0.2
-    tmp=np.sum(w*x)+b
+
+def NAND(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([-0.5, -0.5])
+    b = 0.7
+    tmp = np.sum(w * x) + b
+
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
+
+
+def OR(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.2
+    tmp = np.sum(w * x) + b
 
     if tmp <= 0:
         return 0
@@ -84,39 +86,37 @@ def OR(x1,x2):
 
 
 print("AND(0,0)")
-print(AND(0,0))
+print(AND(0, 0))
 
 print("AND(0,1)")
-print(AND(0,1))
+print(AND(0, 1))
 
 print("AND(1,0)")
-print(AND(1,0))
+print(AND(1, 0))
 
 print("AND(1,1)")
-print(AND(1,1))
-
+print(AND(1, 1))
 
 print("NAND(0,0)")
-print(NAND(0,0))
+print(NAND(0, 0))
 
 print("NAND(0,1)")
-print(NAND(0,1))
+print(NAND(0, 1))
 
 print("NAND(1,0)")
-print(NAND(1,0))
+print(NAND(1, 0))
 
 print("NAND(1,1)")
-print(NAND(1,1))
-
+print(NAND(1, 1))
 
 print("OR(0,0)")
-print(OR(0,0))
+print(OR(0, 0))
 
 print("OR(0,1)")
-print(OR(0,1))
+print(OR(0, 1))
 
 print("OR(1,0)")
-print(OR(1,0))
+print(OR(1, 0))
 
 print("OR(1,1)")
-print(OR(1,1))
+print(OR(1, 1))

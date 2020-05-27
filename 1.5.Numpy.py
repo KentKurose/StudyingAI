@@ -2,47 +2,47 @@ import numpy as np
 
 # 1.5.2 Numpy, create array
 
-x=np.array([1.0,2.0,3.0])
-#print(x)
-#type(x)
+x = np.array([1.0, 2.0, 3.0])
+# print(x)
+# type(x)
 
-#print(type(x))
+# print(type(x))
 
 # 1.5.3 Numpy, caluclate
 
-x=np.array([1.0,2.0,3.0])
-y=np.array([2.0,4.0,6.0])
+x = np.array([1.0, 2.0, 3.0])
+y = np.array([2.0, 4.0, 6.0])
 
-#print( x+y )
-#print( x-y )
-#print( x*y )
-#print( x/y )
+# print( x+y )
+# print( x-y )
+# print( x*y )
+# print( x/y )
 
-x=np.array([1.0,2.0,3.0])
-#print( x/2.0 )
+x = np.array([1.0, 2.0, 3.0])
+# print( x/2.0 )
 
 # 1.5.4 Numpy, N dimension array
-A=np.array([ [1,2] , [3,4] ])
-#print(A)
+A = np.array([[1, 2], [3, 4]])
+# print(A)
 
 # Shape
-#print(A.shape)
+# print(A.shape)
 # Type
-#print(A.dtype)
+# print(A.dtype)
 
 # Arithmetic
 
-B=np.array([[3,6],[0,6]])
+B = np.array([[3, 6], [0, 6]])
 
-#print("----------- Original Values ")
-#print(A)
-#print(B)
-#print("----------- Add")
-#print(A+B)
-#print("----------- Mltiply")
-#print(A*B)
-#print("----------- 10 times(broadcast)")
-#print(A*10)
+# print("----------- Original Values ")
+# print(A)
+# print(B)
+# print("----------- Add")
+# print(A+B)
+# print("----------- Mltiply")
+# print(A*B)
+# print("----------- 10 times(broadcast)")
+# print(A*10)
 
 # 1 Demnsion          => Array
 # 2 Demnsions         => Vector
@@ -50,20 +50,20 @@ B=np.array([[3,6],[0,6]])
 
 # 1.5.5 Broadcast
 
-A=np.array([[1,2],[3,4]])
-B=np.array([10,20])
+A = np.array([[1, 2], [3, 4]])
+B = np.array([10, 20])
 
-#print("----------- Original Values ")
-#print(A)
-#print(B)
-#print("----------- Adds")
-#print(A+B)
-#print("----------- Times")
-#print(A*B)
+# print("----------- Original Values ")
+# print(A)
+# print(B)
+# print("----------- Adds")
+# print(A+B)
+# print("----------- Times")
+# print(A*B)
 
 # 1.5.6 Access to element(s)
 
-X=np.array([[51,55],[14,19],[0,4]])
+X = np.array([[51, 55], [14, 19], [0, 4]])
 
 '''
 print("X")
@@ -89,14 +89,14 @@ for row in X:
         print(val)
 '''
 
-X=X.flatten() # into Array
+X = X.flatten()  # into Array
 print(X)
 
-X[np.array([0,2,4])] # index 0,2,4
-print(X[np.array([0,2,4])])
+var = X[np.array([0, 2, 4])]  # index 0,2,4
+print(X[np.array([0, 2, 4])])
 
-X>15 # Condition
-print(X>15)
+var = X > 15  # Condition
+print(X > 15)
 
-print(X[X>15])
-print(X[X<15])
+print(X[X > 15])
+print(X[X < 15])
